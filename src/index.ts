@@ -1,10 +1,12 @@
 import { initApp } from './presentation/app';
 import { initCore } from './core';
+import { initInfra } from './infra';
 
 const signalTraps: NodeJS.Signals[] = ['SIGTERM', 'SIGINT', 'SIGUSR2', 'SIGHUP'];
 
 const start = async (): Promise<void> => {
   try {
+    await initInfra();
     await initCore();
     await initApp();
   } catch (error) {

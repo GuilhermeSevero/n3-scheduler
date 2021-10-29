@@ -1,3 +1,3 @@
-export const initCore = () => {
-  import('./services');
+export const initCore = async () => {
+  await import('./services');
 };
