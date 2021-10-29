@@ -1,1 +1,3 @@
-export * from './services';
+export const initCore = () => {
+  import('./services');
+};

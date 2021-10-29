@@ -7,7 +7,7 @@ export type TeamFilterQuery = {
   tags: string;
 }
 
-export interface ITeamService {
+export interface ITeamsService {
   create(data: Team): Promise<Team>;
 
   get(id: string): Promise<Team>;
